@@ -55,8 +55,8 @@ export default function Hero() {
       <div className="hero-visual reveal">
         <img
           className="hero-img"
-          src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=900&q=80"
-          alt="Woman wearing Eyeconic eyewear"
+          src="https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=900&q=80"
+          alt="Eyeconic frames and eyewear collection"
           loading="eager"
         />
 

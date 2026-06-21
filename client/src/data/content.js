@@ -35,19 +35,19 @@ export const services = [
     icon: FiHome,
     title: 'Home Eye Testing',
     desc: 'Can’t make it in? Our mobile testing unit brings the full eye exam to your living room at a time that suits you.',
-    image: img('1576091160550-2173dba999ef'),
+    image: img('1579684385127-1ef15d508118'),
   },
   {
     icon: FiTruck,
     title: 'Free Home Delivery',
     desc: 'Your glasses fitted, checked and delivered to your doorstep — fast, insured and free on every order over $99.',
-    image: img('1586769852836-bc069f19e1b6'),
+    image: img('1574258495973-f010dfbb5371'),
   },
   {
     icon: FiShield,
     title: 'Lens Crafting Lab',
     desc: 'Anti-glare, blue-light, photochromic and high-index lenses cut and fitted in our own precision lab.',
-    image: img('1574258495973-f010dfbb5371'),
+    image: img('1577803645773-f96470509666'),
   },
 ]
 
@@ -126,7 +126,7 @@ export const articles = [
     title: 'Find the perfect frame for your face shape',
     excerpt:
       'Round, square, heart or oval — discover which silhouettes flatter you most and why.',
-    image: img('1556306535-0f09a537f0a3'),
+    image: img('1574258495973-f010dfbb5371'),
     date: 'Jun 12, 2026',
     read: '6 min read',
   },
@@ -136,7 +136,7 @@ export const articles = [
     title: 'The truth about blue-light & screen time',
     excerpt:
       'How digital eye strain really works and what actually helps you see comfortably.',
-    image: img('1606318313647-d8a6c4dd96bf'),
+    image: img('1511499767150-a48a237f0083'),
     date: 'Jun 04, 2026',
     read: '5 min read',
   },

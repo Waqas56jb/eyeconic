@@ -30,8 +30,8 @@ export default function About() {
         <div className="container about-grid">
           <div className="reveal">
             <img
-              src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=900&q=80"
-              alt="Eyeconic optometrist at work"
+              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80"
+              alt="Eyeconic computerised eye-test machine"
               loading="lazy"
             />
           </div>
