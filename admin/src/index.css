@@ -54,6 +54,7 @@ body {
   line-height: 1.55;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 a {
   color: inherit;
@@ -407,6 +408,7 @@ select {
   gap: 1rem;
   padding: 1.3rem 1.5rem;
   border-bottom: 1px solid var(--border-soft);
+  flex-wrap: wrap;
 }
 .card-head h3 {
   font-family: var(--serif);
@@ -1404,5 +1406,120 @@ table.tbl {
   }
   .drawer {
     width: 100%;
+  }
+}
+
+/* =====================================================================
+   RESPONSIVE — refinements (phones / tablets)
+   ===================================================================== */
+
+/* Toolbar & segmented controls: scroll instead of overflowing */
+.toolbar {
+  width: 100%;
+}
+@media (max-width: 680px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .toolbar .search-box {
+    width: 100%;
+  }
+  .seg {
+    overflow-x: auto;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .seg::-webkit-scrollbar {
+    display: none;
+  }
+  .seg button {
+    white-space: nowrap;
+  }
+  /* Fixed-width inline search boxes inside card headers go full width */
+  .card-head .search-box {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  .card-head {
+    gap: 0.7rem;
+  }
+}
+
+/* Page header + drawer footer stack on small */
+@media (max-width: 560px) {
+  .page-head {
+    align-items: flex-start;
+  }
+  .page-head .btn {
+    width: 100%;
+  }
+  .page-head .ph-title {
+    font-size: 1.6rem;
+  }
+  .stat-value {
+    font-size: 1.9rem;
+  }
+  .drawer-foot {
+    flex-direction: column-reverse;
+  }
+  .drawer-foot .btn {
+    width: 100%;
+  }
+  .uploader {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Override 3-up delivered/cancelled stat grids */
+  .stat-grid[style] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Denser tables on phones (still horizontally scrollable) */
+@media (max-width: 480px) {
+  .tbl th,
+  .tbl td {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .cell-prod img {
+    width: 36px;
+    height: 36px;
+  }
+  .topbar-title h1 {
+    font-size: 1.2rem;
+  }
+  .topbar {
+    gap: 0.6rem;
+  }
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+/* Support: ticket list capped so the chat is reachable when stacked */
+@media (max-width: 980px) {
+  .support-grid {
+    grid-template-rows: auto 1fr;
+  }
+  .support-grid .ticket-list {
+    max-height: 280px;
+  }
+  .chat {
+    min-height: 460px;
+  }
+}
+
+/* Comfortable tap targets on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  .nav-item,
+  .icon-btn,
+  .chip-toggle,
+  .settings-nav button {
+    min-height: 42px;
   }
 }
