@@ -46,6 +46,8 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 body {
   font-family: var(--sans);
@@ -63,6 +65,14 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+/* Flex/grid children can shrink below content size — prevents overflow */
+.main,
+.card,
+.ticket-meta,
+.topbar-title {
+  min-width: 0;
 }
 ul {
   list-style: none;
