@@ -741,3 +741,89 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* =====================================================================
+   RESPONSIVE — inner pages (phones / tablets)
+   ===================================================================== */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 2.6rem 5% 2.4rem;
+  }
+  .shop,
+  .pdp,
+  .cart,
+  .contact-grid,
+  .related {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* Product detail */
+@media (max-width: 600px) {
+  .pdp-price .now {
+    font-size: 2rem;
+  }
+  .pdp-buy {
+    gap: 0.7rem;
+  }
+  .pdp-buy .btn-primary {
+    flex: 1 1 100%;
+    order: 3;
+  }
+}
+@media (max-width: 460px) {
+  .pdp-thumb {
+    width: 72px;
+    height: 72px;
+  }
+  .pdp-specs {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+}
+
+/* Cart — reflow item card on small phones */
+@media (max-width: 520px) {
+  .cart-item {
+    grid-template-columns: 84px 1fr;
+    gap: 0.9rem;
+  }
+  .cart-item-img,
+  .cart-item-img img {
+    width: 84px;
+    height: 84px;
+  }
+  .cart-item h3 {
+    font-size: 1.2rem;
+  }
+  .cart-line-price {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 0.4rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Contact */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1.6rem;
+  }
+  .map-embed iframe {
+    height: 220px;
+  }
+}
+
+/* Shop toolbar wraps cleanly */
+@media (max-width: 480px) {
+  .shop-toolbar {
+    align-items: stretch;
+  }
+  .shop-sort {
+    flex: 1;
+  }
+  .shop-sort select {
+    flex: 1;
+  }
+}
